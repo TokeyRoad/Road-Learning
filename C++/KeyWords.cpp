@@ -142,6 +142,37 @@ void TestExpl(){
 	B b4 = (B)1;
 }
 
+template<typename T, typename U>
+void func(T t, U u){
+	t(u);
+}
+
+void nullPointer(int* a){
+	std::cout << "i'm a pointer\n'";
+}
+
+void testNullPointer(){
+	nullPointer(0);
+	nullPointer(NULL);	//(void*)0
+	nullPointer(nullptr);// std::nullptr_t
+	func(nullPointer, nullptr);	//OK
+	func(nullPointer, 0);		//error 
+	func(nullPointer, NULL);	//error
+}
+
+struct AAA{
+	int operator &(){
+		return 10;
+	}
+};
+
+void testOperator(){
+	AAA a;
+	auto address = &a;
+}
+
+
+
 
 
 
