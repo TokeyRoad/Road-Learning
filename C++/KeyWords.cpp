@@ -171,8 +171,57 @@ void testOperator(){
 	auto address = &a;
 }
 
+void testReinter(){
+	int a = 1;
+	auto p = reinterpret_cast<char*>(&a);
+	if(p[0] == 1) std::cout << "the system is little endian\n";
+	else std::cout << "the system is big endian\n";
+	// reinterpret_cast
+	// static_cast
+	// const_cast
+	// dynamic_cast
+	
+	// c like cast
+	auto pp = (char*)(&a);
+	const AAA bb;
+	auto pbb = const_cast<AAA*>(&bb);
+	auto cbb = (AAA*)(&bb);
+	int c = 100;
+	auto cc = static_cast<char>(c);
+	auto ccc = (char)c;
+}
 
+static int globalA = 0;
+void printStatic(){
+	static int localStatic = 0;
+	++localStatic;
+	std::cout << localStatic << std::endl;
+}
 
+struct S{
+	static int s;
+};
+//sizeof(S) = 1 // S == empty
+
+int S:s = 10;
+
+void testStaticAssert(){
+	static_assert((sizeof(int) == 4) && "only work for int for 32 bit");
+	int a = 4;
+	int b = 5;
+	assert(a == b);
+}
+
+typedef unsigned long ulong;
+class testTypedef(){
+	typedef std::map<int, ulong> Group;
+	Group a;
+	void aa(){
+		// std::map<int, ulong>::itertor iter = a.find(10);
+		// Group::iteator iter = a.find(10);
+		auto iter = a.find(10);
+	}
+};
 
 
 
