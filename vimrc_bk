@@ -125,10 +125,13 @@ func SetTitle()
 			call append(line(".")+13, "")
 			call append(line(".")+14, "")
 			call append(line(".")+15, "#endif")
+			call append(line(".")+9, "")
+			call append(line(".")+10, "#include<iostream>")
+			call append(line(".")+11, "")
+		else
+			call append(line(".")+6, "#include<iostream>")
+			call append(line(".")+7, "")
 		endif
-		call append(line(".")+9, "")
-		call append(line(".")+10, "#include<iostream>")
-		call append(line(".")+11, "")
 	endif
 	if &filetype == 'c'
 		call append(line(".")+6, "#include<stdio.h>")
@@ -271,10 +274,10 @@ set smartindent
 " 高亮显示普通txt文件（需要txt.vim脚本）
  au BufRead,BufNewFile *  setfiletype txt
 "自动补全
-:inoremap ( ()<ESC>i
+":inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
-":inoremap { {<CR>}<ESC>O
-":inoremap } <c-r>=ClosePair('}')<CR>
+:inoremap { {<CR>}<ESC>O
+:inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ []<ESC>i
 :inoremap ] <c-r>=ClosePair(']')<CR>
 :inoremap " ""<ESC>i
