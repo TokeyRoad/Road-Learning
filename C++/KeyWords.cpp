@@ -213,7 +213,7 @@ void testStaticAssert(){
 }
 
 typedef unsigned long ulong;
-class testTypedef(){
+class testTypedef{
 	typedef std::map<int, ulong> Group;
 	Group a;
 	void aa(){
@@ -222,7 +222,6 @@ class testTypedef(){
 		auto iter = a.find(10);
 	}
 };
-
 
 
 
