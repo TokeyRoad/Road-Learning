@@ -45,7 +45,7 @@ void CTest::Cast() {
         int* iii = const_cast<int*>(&i); //new
         // double* d = const_cast<double*>(&i); //compile error
     }
-    {   //reinterpret_cast
+    {   // reinterpret_cast
         // Not recommended
     }
 }

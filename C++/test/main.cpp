@@ -4,6 +4,7 @@
 
 int main() {
     CTest t;
+    // t.Cast();
     // char ip[65] = {0};
     // t.GetAddrByHost("www.baidu.com", sizeof(ip), ip);
     // std::cout << sizeof(ip) << std::endl;
