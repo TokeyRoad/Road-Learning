@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by Tokey on 2022/5/11.
 //
 
@@ -21,6 +21,7 @@ void CConst::Const() {
     const S s[] = {{1,2}, {3,4}};
     // double d[s[1].j];
     std::cout << max_index << std::endl;
+    // std::cout << max_int << std::endl;
 }
 
 void CConst::ConstPtr() {
