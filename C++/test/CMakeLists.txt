@@ -11,9 +11,14 @@ set(CTest
         "${PROJECT_SOURCE_DIR}/include/CTest.h"
         "${PROJECT_SOURCE_DIR}/include/CTest.cpp")
 
+set(CConst
+        "${PROJECT_SOURCE_DIR}/include/CConst.h"
+        "${PROJECT_SOURCE_DIR}/include/CConst.cpp")
+
 set(Main
         "${PROJECT_SOURCE_DIR}/main.cpp")
 
 add_executable(test
         ${CTest}
+        ${CConst}
         ${Main})

@@ -1,9 +1,13 @@
 #include <iostream>
 #include <stdio.h>
 #include "CTest.h"
+#include "CConst.h"
+
 
 int main() {
     CTest t;
+    CConst ct;
+    ct.Const();
     // t.Cast();
     // char ip[65] = {0};
     // t.GetAddrByHost("www.baidu.com", sizeof(ip), ip);

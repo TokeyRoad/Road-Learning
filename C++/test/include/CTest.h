@@ -12,6 +12,7 @@
 #include "WS2tcpip.h"
 #pragma comment(lib, "ws2_32.lib")
 
+
 class CTest {
 public:
     CTest(){
@@ -27,6 +28,7 @@ public:
     void Cast();
 
     void Typedef();
+
 
 private:
 

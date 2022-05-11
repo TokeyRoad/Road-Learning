@@ -4,6 +4,16 @@
 
 #include "CTest.h"
 
+// 错误写法  const想要给外部使用，必须使用extern明确的转为外部连接
+// 默认const常量 仅仅是个内部连接并'可能'没有内存空间，声明为extern时就必定会分配内存
+extern const int max_index = 100;
+// extern const int MAX_SIZE = 100;
+// 由于分配了内存 所以编译期 值不可见 所以下面的使用是错误的
+// float d[MAX_SIZE];
+
+// 正确写法 非const全局变量 仅需要外部使用时声明extern即可
+int max_int = 200;
+
 void CTest::GetAddrByHost(const char *host, const int size, char *ip)  {
     struct addrinfo *pAddrinfo, hint;
     // gethostbyname(host)
