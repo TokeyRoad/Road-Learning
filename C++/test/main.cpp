@@ -7,7 +7,7 @@
 int main() {
     CTest t;
     CConst ct;
-    ct.Const();
+    ct.ConstRef();
     // t.Cast();
     // char ip[65] = {0};
     // t.GetAddrByHost("www.baidu.com", sizeof(ip), ip);
