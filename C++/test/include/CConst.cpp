@@ -90,3 +90,26 @@ void CConst::ConstRef() {
     // f7(f6);      //illegal
 
 }
+
+void CConst::SetInt(int i) {
+    m_int = i;
+}
+
+int CConst::GetInt() const {
+    // m_int = m_mint; //illegal
+    m_mint = m_int; //legal
+    return m_int;
+}
+
+CConst::CConst(const int i) : m_int(i), m_mint(i+1) {
+}
+
+void X::testConst() {
+    CConst c1(10);
+    c1.SetInt(11);
+    Print(c1.GetInt());
+
+    const CConst c2(1);
+    // c2.SetInt(2);     //const对象 无法使用类中的非const函数
+    Print(c2.GetInt());
+}

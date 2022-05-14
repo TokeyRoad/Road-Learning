@@ -8,15 +8,23 @@
 
 class CConst {
 public:
+    CConst(const int i);
     void Const();
     void ConstPtr();
     void ConstRef();
+    void SetInt(int i);
+    int GetInt() const;
+
+private:
+    int m_int;
+    mutable int m_mint;
 };
 
 class X {
 public:
     X(int ii = 0) { std::cout << ii << std::endl; i = ii;}
     void modify() { i++;}
+    void testConst();
 private:
     int i;
 };
