@@ -15,10 +15,15 @@ set(CConst
         "${PROJECT_SOURCE_DIR}/include/CConst.h"
         "${PROJECT_SOURCE_DIR}/include/CConst.cpp")
 
+set(CInline
+        "${PROJECT_SOURCE_DIR}/include/CInline.h"
+        "${PROJECT_SOURCE_DIR}/include/CInline.cpp")
+
 set(Main
         "${PROJECT_SOURCE_DIR}/main.cpp")
 
 add_executable(test
         ${CTest}
         ${CConst}
+        ${CInline}
         ${Main})

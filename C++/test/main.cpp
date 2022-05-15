@@ -2,12 +2,15 @@
 #include <stdio.h>
 #include "CTest.h"
 #include "CConst.h"
+#include "CInline.h"
 
 
 int main() {
     CTest t;
     X x;
-    x.testConst();
+    CInline ci;
+    ci.DefineError();
+    // x.testConst();
     // t.Cast();
     // char ip[65] = {0};
     // t.GetAddrByHost("www.baidu.com", sizeof(ip), ip);
